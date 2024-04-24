@@ -2,7 +2,7 @@
 
 * Студент: [Полина Смирнова](https://up.htmlacademy.ru/htmlcss-individual/2/user/2507391).
 * Наставник: [Артем Именин](https://htmlacademy.ru/profile/aimenin).
-* Мой сайт: [Мой чайт](https://pollirey.github.io/2507391-sedona-2/).
+* Мой сайт: [Мой сайт](https://pollirey.github.io/2507391-sedona-2/).
 
 ---
 
