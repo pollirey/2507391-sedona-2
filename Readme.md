@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Полина Смирнова](https://up.htmlacademy.ru/htmlcss-individual/2/user/2507391).
-* Наставник: [Артем Именин](https://htmlacademy.ru/profile/aimenin).
+* Наставник: [Александр Зиновьев](https://htmlacademy.ru/profile/id198751).
 * Мой сайт: [Мой сайт](https://pollirey.github.io/2507391-sedona-2/).
 
 ---
