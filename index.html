@@ -7,58 +7,56 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <header class="headar" data-test="header">
-      <nav class="headar-navigation">
-        <svg class="logo-header" src="./images/logo-header.svg"  width="367"
-        height="152" role="img"  aria-label="Город Седона «Седона»"></svg>
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Главная</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">О седоне</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" class="hero-link" href="catalog.html">Гостиницы</a>
-          </li>
-        </ul>
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" data-test="search" href="#">
-              <span class="search visually-hidden">
-              Поиск
-            </span>
-          <img class="navigation-img" src="./images/search-1.svg" alt="Поиск"></a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">
-                <span class="likes-number"
-              Избранное
-            </span>
-          <img class="navigation-img" src="./images/favourites-2.svg" alt="Избранное"></a>
-          </li>
-          <li class="navigation-item">
-            <button class="navigation-link" type="button" href="#">ХОЧУ СЮДА!</button>
-          </li>
-        </ul>
-      </nav>
+    <header class="header" data-test="header">
+      <div class="container">
+        <nav class="header-navigation">
+          <a href="#" class="logo">
+            <img src="./images/logo-header.svg" alt="Логотип Седона">
+          </a>
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Главная</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">О седоне</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link hero-link" href="catalog.html">Гостиницы</a>
+            </li>
+          </ul>
+          <ul class="navigation-list navigation-user">
+            <li class="navigation-item">
+              <a class="navigation-link" data-test="search" href="#">
+                <div class="image-search"></div>
+                <span class="search visually-hidden">
+                  Поиск
+                </span>
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">
+                <div class="image-favourites"></div>
+                <span class="visually-hidden">
+                  <span class="likes-number"></span>
+                  Избранное
+                </span>
+              </a>
+            </li>
+            <li class="navigation-item">
+              <button class="navigation-link" type="button" href="#">ХОЧУ СЮДА!</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="main" data-test="main">
       <section class="hero" data-test="hero">
-        <h1 class="visually-hidden">СЕДОНА</h1>
-        <img class="logo" src="./images/index-background.png" alt="Горы в городе Седона»">
-      <div class="hero-divider">
-        <img class="logo-divider" src="./images/divider.png">
-      </div>
-      <section class="subscribe">
-        <div class="hero-text">
-          <h2 class="hero-title">Седона — небольшой городок в Аризоне,
-            заслуживающий большего!</h2>
-            <p class="hero-subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        <div class="hero-content">
+          <img src="./images/welcome.svg" alt="Изображение" class="hero-image">
+          <h1 class="hero-title visually-hidden">Седона</h1>
         </div>
+        <div class="hero-divider"></div>
       </section>
-    </section>
       <section class="advantages" data-test="advantages">
       <section class="advantages-grid advantages-grid__first">
         <article class="advantages-item advantages-item__short">
