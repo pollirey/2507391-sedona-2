@@ -6,53 +6,82 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+    <div class="wrapper">
     <header class="main-header" data-test="header">
-      <div class="container">
-        <nav class="header-navigation">
-          <a href="#" class="logo">
-            <img src="./images/logo-header.svg" alt="Логотип Седона">
-          </a>
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">Главная</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">О седоне</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link hero-link" href="./catalog.html">Гостиницы</a>
-            </li>
-          </ul>
-          <ul class="navigation-list navigation-user">
-            <li class="navigation-item">
-              <a class="navigation-link" data-test="search" href="#">
-                <svg class="image-search" width="44" height="64" viewBox="0 0 44 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M31.5 40.0083L27.8 36.3287C28.8 35.0359 29.5 33.3453 29.5 31.4558C29.5 27.0801 25.9 23.5 21.5 23.5C17.1 23.5 13.5 27.1796 13.5 31.5552C13.5 35.9309 17.1 39.511 21.5 39.511C23.3 39.511 25 38.9144 26.4 37.8204L30.1 41.5L31.5 40.0083ZM21.5 37.5221C18.2 37.5221 15.5 34.837 15.5 31.5552C15.5 28.2735 18.2 25.5884 21.5 25.5884C24.8 25.5884 27.5 28.2735 27.5 31.5552C27.5 34.837 24.8 37.5221 21.5 37.5221Z" fill="black"/>
-                  </svg>
-                <span class="search visually-hidden">
-                  Поиск
-                </span>
-              </a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" type="button" href="#">
-                <svg class="image-favourites" width="44" height="64" viewBox="0 0 44 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M21.9 41C21.6 41 21.3 40.9 21.1 40.6C15.7 34.5 14.4 33.1 14.1 32.7C13.4 31.8 13 30.6 13 29.4C13 26.4 15.4 24 18.5 24C19.8 24 21 24.5 22 25.3C23 24.5 24.3 24 25.5 24C28.5 24 31 26.4 31 29.4C31 30.7 30.5 31.9 29.7 32.8L22.7 40.7C22.5 40.9 22.3 41 21.9 41ZM15.9 31.5C16.2 31.9 19.4 35.5 22 38.4L28.2 31.4C28.7 30.9 28.9 30.2 28.9 29.4C28.9 27.6 27.4 26.1 25.6 26.1C24.6 26.1 23.6 26.6 22.9 27.4C22.6 27.7 22.3 27.8 22 27.8C21.7 27.8 21.4 27.6 21.2 27.4C20.5 26.6 19.5 26.1 18.5 26.1C16.7 26.1 15.2 27.6 15.2 29.4C15.1 30.3 15.5 31 15.9 31.5C15.8 31.5 15.8 31.5 15.9 31.5Z" fill="black"/>
-                  <rect x="20" y="11" width="20" height="20" rx="10" fill="#7DB54F"/>
-                  <path d="M25.1308 24.26H26.5308V19.42L26.6308 18.83L26.2308 19.3L25.1308 20.09L24.7508 19.58L26.9508 17.88H27.3108V24.26H28.6808V25H25.1308V24.26ZM33.96 19.59C33.96 19.9433 33.8933 20.3067 33.76 20.68C33.6333 21.0467 33.4633 21.4167 33.25 21.79C33.0433 22.1633 32.81 22.53 32.55 22.89C32.29 23.2433 32.03 23.58 31.77 23.9L31.28 24.33V24.37L31.92 24.26H34.1V25H30.12V24.71C30.2667 24.5567 30.4433 24.3667 30.65 24.14C30.8567 23.9133 31.07 23.6633 31.29 23.39C31.5167 23.11 31.7367 22.8167 31.95 22.51C32.17 22.1967 32.3667 21.88 32.54 21.56C32.72 21.24 32.8633 20.9233 32.97 20.61C33.0767 20.2967 33.13 20 33.13 19.72C33.13 19.3933 33.0367 19.1233 32.85 18.91C32.6633 18.69 32.38 18.58 32 18.58C31.7467 18.58 31.5 18.6333 31.26 18.74C31.02 18.84 30.8133 18.9567 30.64 19.09L30.31 18.52C30.5433 18.32 30.82 18.1633 31.14 18.05C31.46 17.9367 31.8033 17.88 32.17 17.88C32.4567 17.88 32.71 17.9233 32.93 18.01C33.15 18.09 33.3367 18.2067 33.49 18.36C33.6433 18.5133 33.76 18.6967 33.84 18.91C33.92 19.1167 33.96 19.3433 33.96 19.59Z" fill="white"/>
-                  </svg>
-                <span class="visually-hidden">
-                  <span class="likes-number"></span>
-                  Избранное
-                </span>
-              </a>
-            </li>
-            <li class="navigation-item">
-              <button class="navigation-button" type="button" href="#">ХОЧУ СЮДА!</button>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="header-navigation">
+        <a href="#" class="logo">
+          <img src="./images/logo-header.svg" alt="Логотип Седона" />
+        </a>
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Главная</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">О седоне</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link hero-link" href="./catalog.html"
+              >Гостиницы</a
+            >
+          </li>
+        </ul>
+        <ul class="navigation-list navigation-user">
+          <li class="navigation-item">
+            <a class="navigation-icon" data-test="search" href="#">
+              <svg
+                width="44"
+                height="64"
+                viewBox="0 0 44 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M31.5 40.0083L27.8 36.3287C28.8 35.0359 29.5 33.3453 29.5 31.4558C29.5 27.0801 25.9 23.5 21.5 23.5C17.1 23.5 13.5 27.1796 13.5 31.5552C13.5 35.9309 17.1 39.511 21.5 39.511C23.3 39.511 25 38.9144 26.4 37.8204L30.1 41.5L31.5 40.0083ZM21.5 37.5221C18.2 37.5221 15.5 34.837 15.5 31.5552C15.5 28.2735 18.2 25.5884 21.5 25.5884C24.8 25.5884 27.5 28.2735 27.5 31.5552C27.5 34.837 24.8 37.5221 21.5 37.5221Z"
+                  fill="black"
+                />
+              </svg>
+              <span class="search visually-hidden"> Поиск </span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-icon" type="button" href="#">
+              <svg
+                width="44"
+                height="64"
+                viewBox="0 0 44 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.9 41C21.6 41 21.3 40.9 21.1 40.6C15.7 34.5 14.4 33.1 14.1 32.7C13.4 31.8 13 30.6 13 29.4C13 26.4 15.4 24 18.5 24C19.8 24 21 24.5 22 25.3C23 24.5 24.3 24 25.5 24C28.5 24 31 26.4 31 29.4C31 30.7 30.5 31.9 29.7 32.8L22.7 40.7C22.5 40.9 22.3 41 21.9 41ZM15.9 31.5C16.2 31.9 19.4 35.5 22 38.4L28.2 31.4C28.7 30.9 28.9 30.2 28.9 29.4C28.9 27.6 27.4 26.1 25.6 26.1C24.6 26.1 23.6 26.6 22.9 27.4C22.6 27.7 22.3 27.8 22 27.8C21.7 27.8 21.4 27.6 21.2 27.4C20.5 26.6 19.5 26.1 18.5 26.1C16.7 26.1 15.2 27.6 15.2 29.4C15.1 30.3 15.5 31 15.9 31.5C15.8 31.5 15.8 31.5 15.9 31.5Z"
+                  fill="black"
+                />
+                <rect
+                  x="20"
+                  y="11"
+                  width="20"
+                  height="20"
+                  rx="10"
+                  fill="#7DB54F"
+                />
+                <path
+                  d="M25.1308 24.26H26.5308V19.42L26.6308 18.83L26.2308 19.3L25.1308 20.09L24.7508 19.58L26.9508 17.88H27.3108V24.26H28.6808V25H25.1308V24.26ZM33.96 19.59C33.96 19.9433 33.8933 20.3067 33.76 20.68C33.6333 21.0467 33.4633 21.4167 33.25 21.79C33.0433 22.1633 32.81 22.53 32.55 22.89C32.29 23.2433 32.03 23.58 31.77 23.9L31.28 24.33V24.37L31.92 24.26H34.1V25H30.12V24.71C30.2667 24.5567 30.4433 24.3667 30.65 24.14C30.8567 23.9133 31.07 23.6633 31.29 23.39C31.5167 23.11 31.7367 22.8167 31.95 22.51C32.17 22.1967 32.3667 21.88 32.54 21.56C32.72 21.24 32.8633 20.9233 32.97 20.61C33.0767 20.2967 33.13 20 33.13 19.72C33.13 19.3933 33.0367 19.1233 32.85 18.91C32.6633 18.69 32.38 18.58 32 18.58C31.7467 18.58 31.5 18.6333 31.26 18.74C31.02 18.84 30.8133 18.9567 30.64 19.09L30.31 18.52C30.5433 18.32 30.82 18.1633 31.14 18.05C31.46 17.9367 31.8033 17.88 32.17 17.88C32.4567 17.88 32.71 17.9233 32.93 18.01C33.15 18.09 33.3367 18.2067 33.49 18.36C33.6433 18.5133 33.76 18.6967 33.84 18.91C33.92 19.1167 33.96 19.3433 33.96 19.59Z"
+                  fill="white"
+                />
+              </svg>
+              <span class="visually-hidden">
+                <span class="likes-number"></span>
+                Избранное
+              </span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <button class="navigation-button" type="button" href="#">
+              ХОЧУ СЮДА!
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
       <main class="main-catalog" data-test="main">
         <section class="filter" data-test="filter">
@@ -129,16 +158,52 @@
               <li class="catalog-item large-items">
                 <a href="#" class="catalog-link">
                   <span class="visually-hidden">Отображение списка в виде крупных элементов</span>
+                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 0H0V6H4V0Z" fill="black"/>
+                    <path d="M16 0H12V6H16V0Z" fill="black"/>
+                    <path d="M10 0H6V6H10V0Z" fill="black"/>
+                    <path d="M4 8H0V14H4V8Z" fill="black"/>
+                    <path d="M16 8H12V14H16V8Z" fill="black"/>
+                    <path d="M10 8H6V14H10V8Z" fill="black"/>
+                    </svg>
                 </a>
               </li>
                 <li class="catalog-item single-element">
                 <a href="#" class="catalog-link">
                   <span class="visually-hidden">Отображение списка в виде одного крупного элемента</span>
+                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_138058_277)">
+                    <path d="M16 12H0V14H16V12Z" fill="black"/>
+                    <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_138058_277">
+                    <rect width="16" height="14" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
                 </a>
               </li>
                 <li class="catalog-item list-element">
                 <a href="#" class="catalog-link">
                   <span class="visually-hidden">Отображение элементов списком</span>
+                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_138058_294)">
+                    <path d="M2 0H0V2H2V0Z" fill="black"/>
+                    <path d="M16 0H4V2H16V0Z" fill="black"/>
+                    <path d="M2 4H0V6H2V4Z" fill="black"/>
+                    <path d="M16 4H4V6H16V4Z" fill="black"/>
+                    <path d="M2 8H0V10H2V8Z" fill="black"/>
+                    <path d="M16 8H4V10H16V8Z" fill="black"/>
+                    <path d="M2 12H0V14H2V12Z" fill="black"/>
+                    <path d="M16 12H4V14H16V12Z" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_138058_294">
+                    <rect width="16" height="14" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
                 </a>
               </li>
             </ul>
@@ -264,24 +329,46 @@
       <footer class="footer" data-test="footer">
         <div class="footer-container">
           <div class="footer-social footer-social-icons">
-            <a class="footer-social-link" href="https://vk.com/htmlacademy" target="_blank">
-              <img class="footer-social-icons" src="./images/social-vk-1.svg">
+            <a
+              class="footer-social-link"
+              href="https://vk.com/htmlacademy"
+              target="_blank"
+            >
+              <img class="footer-social-icons" src="./images/vk.svg" />
             </a>
-            <a class="footer-social-link" href="https://t.me/htmlacademy " target="_blank">
-              <img class="footer-social-icons" src="./images/Social-tg-2.svg">
+            <a
+              class="footer-social-link"
+              href="https://t.me/htmlacademy "
+              target="_blank"
+            >
+              <img class="footer-social-icons" src="./images/tg.svg" />
             </a>
-            <a class="footer-social-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-              <img class="footer-social-icons" src="./images/social-youtube-3.svg">
+            <a
+              class="footer-social-link"
+              href="https://www.youtube.com/user/htmlacademyru"
+              target="_blank"
+            >
+              <img
+                class="footer-social-icons"
+                src="./images/youtube.svg"
+              />
             </a>
           </div>
-          <a class="footer-phone-number">
-            +7 (977) 536-91-59
-          </a>
+          <a class="footer-phone-number"> +7 (977) 536-91-59 </a>
           <div class="footer-logo">
-            <a class="footer-logo-link" href="https://htmlacademy.ru/" target="_blank">
-              <img class="footer-logo-prime" src="./images/logo_htmlacademy.svg" class="fas fa-envelope">
+            <a
+              class="footer-logo-link"
+              href="https://htmlacademy.ru/"
+              target="_blank"
+            >
+              <img
+                class="footer-logo-prime"
+                src="./images/logo_htmlacademy.svg"
+                class="fas fa-envelope"
+              />
             </a>
           </div>
         </div>
       </footer>
+    </div>
     </body>
