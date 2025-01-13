@@ -1,17 +1,19 @@
 @font-face {
   font-family: "PT Sans";
   font-weight: 400;
-  src: url("../fonts/ptsans-400.woff2") format("woff"),
-    url("../fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff");
   font-display: swap;
 }
 
 @font-face {
   font-family: "PT Sans";
   font-weight: 700;
-  src: url("../fonts/ptsans-700.woff2") format("woff2"),
-    url("../fonts/ptsans-700.woff") format("woff");
+  src: url("../fonts/ptsans-700.woff") format("woff");
   font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -21,6 +23,7 @@ body {
   font-weight: 400;
   margin: 0;
   background-color: #f2f2f2;
+  height: 100vh;
 }
 
 .wrapper {
@@ -28,6 +31,7 @@ body {
   margin: 0 auto;
   background-color: #fff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  height: 100%;
 }
 
 .main-header {
@@ -35,6 +39,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+  flex-grow: 1;
 }
 
 .header-navigation {
@@ -85,6 +90,8 @@ body {
   color: #000000;
   font-family: "PT Sans";
   font-weight: 700;
+  line-height: 24px;
+  font-size: 20px;
 }
 
 .navigation-button {
@@ -97,7 +104,10 @@ body {
   margin-top: 8px;
   margin-bottom: 8px;
   margin-left: 20px;
+  line-height: 20px;
+  font-size: 16px;
   font-weight: 700;
+  font-family: "PT Sans";
   text-transform: uppercase;
 }
 
@@ -173,6 +183,8 @@ body {
 .greeting-title {
   line-height: 36px;
   font-size: 30px;
+  font-weight: 400px;
+  font-family: "PT Sans";
   width: 620px;
   margin-bottom: 25px;
   margin-top: 69px;
@@ -182,6 +194,8 @@ body {
 .greeting-subtitle {
   font-size: 22px;
   line-height: 26px;
+  font-weight: 400px;
+  font-family: "PT Sans";
   width: 651px;
   margin-bottom: 69px;
   margin-top: 0;
@@ -219,6 +233,8 @@ body {
 .advantages-title {
   line-height: 28px;
   font-size: 24px;
+  font-weight: 700px;
+  font-family: "PT Sans";
   width: 175px;
   margin-bottom: 62px;
   margin-top: 102px;
@@ -231,6 +247,8 @@ body {
 .advantages-subtitle {
   font-size: 18px;
   line-height: 21px;
+  font-weight: 400px;
+  font-family: "PT Sans";
   width: 230px;
   margin-bottom: 102px;
   margin-top: 0;
@@ -264,6 +282,8 @@ body {
   font-size: 30px;
   line-height: 36px;
   width: 505px;
+  font-weight: 700px;
+  font-family: "PT Sans";
 }
 
 .invitation-subtitle {
@@ -273,11 +293,13 @@ body {
   color: #333333;
   font-size: 22px;
   line-height: 26px;
+  font-weight: 400px;
+  font-family: "PT Sans";
 }
 
 .recomendation-grid {
   display: grid;
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .recomendation-item {
@@ -294,6 +316,8 @@ body {
   text-transform: uppercase;
   font-size: 24px;
   line-height: 28px;
+  font-weight: 700px;
+  font-family: "PT Sans";
 }
 
 .recomendation-subtitle {
@@ -301,6 +325,8 @@ body {
   color: #333333;
   font-size: 18px;
   line-height: 21px;
+  font-weight: 400px;
+  font-family: "PT Sans";
 }
 
 .decoration-color {
@@ -325,11 +351,15 @@ body {
   width: 505px;
   font-size: 30px;
   line-height: 36px;
+  font-weight: 700px;
+  font-family: "PT Sans";
 }
 
 .search-subtitle {
   font-size: 22px;
   line-height: 26px;
+  font-weight: 400px;
+  font-family: "PT Sans";
   width: 490px;
   margin-top: 0;
   margin-bottom: 54px;
@@ -351,10 +381,12 @@ body {
   border: 0;
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700px;
+  font-family: "PT Sans";
 }
 
 .subscribe {
-  background-image: url("../images/subscribe.png");
+  background-image: url("../images/subscribe.jpeg");
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -370,6 +402,8 @@ body {
   color: #ffffff;
   font-size: 30px;
   line-height: 36px;
+  font-weight: 700px;
+  font-family: "PT Sans";
 }
 
 .subscribe-subtitle {
@@ -379,6 +413,8 @@ body {
   color: #ffffff;
   font-size: 22px;
   line-height: 26px;
+  font-weight: 400px;
+  font-family: "PT Sans";
 }
 
 .subscribe-form {
@@ -395,6 +431,8 @@ body {
   background: #f2f2f2;
   font-size: 18px;
   line-height: 24px;
+  font-weight: 400px;
+  font-family: "PT Sans";
 }
 
 .subscribe-button {
@@ -405,6 +443,8 @@ body {
   text-transform: uppercase;
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700px;
+  font-family: "PT Sans";
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
@@ -412,25 +452,33 @@ body {
 
 .footer {
   width: 100%;
-  position: sticky;
-  bottom: 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
-  padding: 0 70px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
 }
 
 .footer-social {
-  width: 142px;
+  display: flex;
+  gap: 10px;
 }
 
 .footer-social-icons {
-  display: inline-block;
+
 }
 
 .footer-social-link {
+  width: 24px;
+  height: 24px;
 }
 
 .footer-phone-number {
@@ -439,10 +487,13 @@ body {
   color: #000;
   font-size: 40px;
   line-height: 40px;
+  font-weight: 700px;
+  font-family: "PT Sans";
 }
 
 .footer-logo {
-  margin-left: auto;
+  width: 115px;
+  height: auto;
 }
 
 .footer-logo-link {
@@ -466,16 +517,22 @@ body {
   background-image: url("../images/catalog.jpg");
   background-size: cover;
   color: #fff;
+  padding: 35px 70px 70px;
 }
 
 .filter-title {
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
+  font-family: "PT Sans";
+  font-weight: 700px;
 }
 
 .list-title {
   font-size: 16px;
   line-height: 21px;
+  font-family: "PT Sans";
+  font-weight: 400px;
 }
 
 .image-home {
@@ -488,6 +545,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  font-family: "PT Sans";
 }
 
 .filter-round {
@@ -517,6 +575,9 @@ body {
 .filter-item {
   font-size: 18px;
   line-height: 23px;
+  font-weight: 400;
+  font-family: "PT Sans";
+
 }
 
 .filter-checkbox {
@@ -565,7 +626,6 @@ body {
   height: 8px;
   border-bottom: 2px solid #000;
   border-right: 2px solid #000;
-  transform: scale(0);
   transition: transform 0.2s ease;
   position: absolute;
   top: 4px;
@@ -587,6 +647,8 @@ body {
 .price-label {
   font-size: 20px;
   line-height: 24px;
+  font-weight: 700px;
+  font-family: "PT Sans";
 }
 
 .price-range {
@@ -598,6 +660,8 @@ body {
 .price-item {
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400px;
+  font-family: "PT Sans";
   color: ;
 }
 
@@ -610,6 +674,8 @@ body {
 .apply-button {
   font-size: 16px;
   line-height: 20px;
+  font-weight: 700px;
+  font-family: PT Sans;
   background-color: #82b3d3;
   text-transform: uppercase;
   border: none;
@@ -621,6 +687,8 @@ body {
 .reset-button {
   font-size: 16px;
   line-height: 20px;
+  font-weight: 700px;
+  font-family: "PT Sans";
   color: #fff;
   background-color: rgba(0, 0, 0, 0);
   text-transform: uppercase;
@@ -644,12 +712,16 @@ body {
 .catalog-title {
   font-size: 30px;
   line-height: 36px;
+  font-weight: 700px;
+  font-family: "PT Sans";
   text-transform: uppercase;
 }
 
 .catalog-dropdown {
   font-size: 18px;
   line-height: 21px;
+  font-weight: 400px;
+  font-family: "PT Sans";
   color: #333333;
   width: 292px;
 }
@@ -669,7 +741,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  font-family: PT Sans;
+  font-family: "PT Sans";
   font-weight: 400;
 }
 
@@ -710,8 +782,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding-right: 70px;
-  padding-left: 70px;
+  margin-bottom: 80px;
 }
 
 .catalog-product {
@@ -735,11 +806,19 @@ body {
   line-height: 21px;
 }
 
+.hotel-price {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
 .hotel-subtitle,
 .price {
   font-size: 16px;
   line-height: 20px;
   color: #333333;
+  font-weight: 400px;
+  font-family: "PT Sans";
 }
 
 .hotel-subtitle {
@@ -749,6 +828,7 @@ body {
 .hotel-buttons {
   display: flex;
   gap: 10px;
+  justify-content: space-between;
   margin-bottom: 16px;
 }
 
@@ -756,12 +836,15 @@ body {
 .botton-favourites {
   font-size: 16px;
   line-height: 20px;
+  font-weight: 700px;
+  font-family: "PT Sans";
   text-transform: uppercase;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   color: #fff;
   padding: 10px 16px;
+  text-decoration: none;
 }
 
 .botton-detailed {
@@ -774,6 +857,12 @@ body {
 
 .botton-favourites {
   background-color: #82b3d3;
+}
+
+.rating-grow{
+   display: flex;
+   justify-content: space-between;
+   gap: 10px;
 }
 
 .rating {
@@ -789,6 +878,8 @@ body {
 .hotel-rating {
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400px;
+  font-family: "PT Sans";
   background-color: #f2f2f2;
   text-transform: uppercase;
   color: #333333;
@@ -801,6 +892,8 @@ body {
   color: #fff;
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700px;
+  font-family: "PT Sans";
   border-radius: 4px;
   padding: 10px 20px;
   border: none;
@@ -812,6 +905,8 @@ body {
   color: #000;
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700px;
+  font-family: "PT Sans";
   border-radius: 4px;
   padding: 10px 20px;
 }
@@ -819,8 +914,10 @@ body {
 .block-pagination {
   background-color: #ffffff;
   color: #000;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400px;
+  font-family: "PT Sans";
   padding: 10px 20px;
   border-radius: 4px;
   border: 1px solid #e5e5e5;
