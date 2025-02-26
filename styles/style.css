@@ -69,6 +69,24 @@ body {
   margin-right: 20px;
 }
 
+.navigation-item .button:hover {
+  background-color: rgba(97, 80, 72, 1);
+}
+
+.navigation-item .button:focus {
+  background-color: rgba(97, 80, 72, 1);
+}
+
+.navigation-item .button:active {
+  background-color: rgba(117, 97, 87, 1);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.navigation-item .button:disabled {
+  background-color: rgba(229, 229, 229, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
 .navigation-icon {
   display: block;
   width: 44px;
@@ -401,6 +419,24 @@ body {
   font-family: "PT Sans";
 }
 
+.search-botton .button:hover {
+  background-color: rgba(97, 80, 72, 1);
+}
+
+.search-botton .button:focus {
+  background-color: rgba(97, 80, 72, 1);
+}
+
+.search-botton .button:active {
+  background-color: rgba(117, 97, 87, 1);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-botton .button:disabled {
+  background-color: rgba(229, 229, 229, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
 .subscribe {
   background-image: url("../images/subscribe.jpeg");
   text-align: center;
@@ -439,6 +475,14 @@ body {
   margin-bottom: 104px;
 }
 
+.subscribe-form:focus {
+  outline: 3px solid rgba(131, 178, 211, 1);
+}
+
+.subscribe-form:hover {
+  background-color: rgba(230, 230, 230, 1);
+}
+
 .subscribe-email {
   width: 452px;
   padding: 14px;
@@ -465,6 +509,26 @@ body {
   border-radius: 0 4px 4px 0;
   cursor: pointer;
 }
+
+.subscribe-button .button:hover {
+  background-color: rgba(104, 162, 202, 1);
+}
+
+.subscribe-button .button:focus {
+  background-color: rgba(104, 162, 202, 1)
+}
+
+.subscribe-button .button:active {
+  background-color: rgba(130, 179, 211, 1);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.subscribe-button .button:disabled {
+  background-color: rgba(229, 229, 229, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+
 
 .footer {
   width: 100%;
