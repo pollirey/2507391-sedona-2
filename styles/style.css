@@ -1141,8 +1141,8 @@ body {
 
 .modal-calendar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 24px;
 }
 
 /* .modal-calendar, .modal-persan {
@@ -1159,6 +1159,7 @@ body {
   font-weight: 700;
   font-family: "PT Sans";
   color: #000;
+  flex-shrink: 0;
 }
 
 .form-comment {
@@ -1268,14 +1269,12 @@ body {
   background-color: #83b3d3;
   padding: 0;
   margin: 0;
-  display: block;
+  display: flex;
   width: 25px;
   height: 25px;
   border-radius: 50%;
-}
-.tooltip-icon {
- color: #FFFFFF;
-
+  justify-content: center;
+  justify-items: center;
 }
 
 .tooltip-toggle:hover .tooltip-icon {
@@ -1300,7 +1299,6 @@ body {
 
 .tooltip {
   margin-left: 13px;
-  text-align: center;
 }
 
 .tooltip:hover .tooltip-text {

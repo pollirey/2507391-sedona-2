@@ -223,7 +223,7 @@
             Только полезная информация и никакого спама,<br />
             честное бойскаутское!
           </p>
-          <form class="subscribe-form" action="https://echo.htmlacademy.ru">
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
             <input
               class="subscribe-email"
               type="email"
@@ -283,11 +283,11 @@
                <!-- <span class="visually-hidden">Закрыть</span> -->
             </button>
           </div>
-             <form class="modal-form">
+             <form action="https://echo.htmlacademy.ru/" method="post" class="modal-form">
               <div class="modal-calendar">
                 <p class="modal-text">Дата заезда:</p>
                 <div class="form-comment">
-                  <div class="form form-arrival">
+                  <input class="form form-arrival" type="text">
                     <p class="form-text">27 апреля 2020</p>
                     <svg class="form-img" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.75 10C6.05 10 6.25 9.8 6.25 9.5C6.25 9.2 6.05 9 5.75 9C5.45 9 5.25 9.2 5.25 9.5C5.25 9.8 5.45 10 5.75 10Z" fill="black"/>
@@ -302,14 +302,14 @@
                       <path d="M12.5 10C12.8 10 13 9.8 13 9.5C13 9.2 12.8 9 12.5 9C12.2 9 12 9.2 12 9.5C12 9.8 12.2 10 12.5 10Z" fill="black"/>
                       <path d="M12.5 11C12.2 11 12 11.2 12 11.5C12 11.8 12.2 12 12.5 12C12.8 12 13 11.8 13 11.5C13 11.2 12.8 11 12.5 11Z" fill="black"/>
                       </svg>
-                  </div>
+                  </input>
                   <p class="form-notice form-notice-arrival">Мы не можем отправить вас в прошлое.</p>
                 </div>
               </div>
               <div class="modal-calendar">
                 <p class="modal-text">Дата выезда:</p>
                 <div class="form-comment">
-                  <div class="form form-back">
+                  <input class="form form-back" type="text">
                     <p class="form-text">1 сентября 2023</p>
                     <svg class="form-img" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.75 10C6.05 10 6.25 9.8 6.25 9.5C6.25 9.2 6.05 9 5.75 9C5.45 9 5.25 9.2 5.25 9.5C5.25 9.8 5.45 10 5.75 10Z" fill="black"/>
@@ -324,12 +324,12 @@
                       <path d="M12.5 10C12.8 10 13 9.8 13 9.5C13 9.2 12.8 9 12.5 9C12.2 9 12 9.2 12 9.5C12 9.8 12.2 10 12.5 10Z" fill="black"/>
                       <path d="M12.5 11C12.2 11 12 11.2 12 11.5C12 11.8 12.2 12 12.5 12C12.8 12 13 11.8 13 11.5C13 11.2 12.8 11 12.5 11Z" fill="black"/>
                       </svg>
-                  </div>
+                  </input>
                   <p class="form-notice">На эти даты есть свободные номера. Пока есть.</p>
                 </div>
               </div>
               <div class="modal-persan">
-                <div class="modal-people">
+                <input  type="number" class="modal-people">
                   <p class="modal-text">Взрослые:</p>
                   <div class="form-person">
                   <button class=" decrease-button">
@@ -344,12 +344,14 @@
                       </svg>
                   </button>
                   </div>
-                </div>
-                <div class="modal-child">
+                </input>
+                <input type="number" class="modal-child">
                   <p class="modal-text">Дети:</p>
                   <span class="tooltip">
                     <button class="tooltip-toggle" type="button">
-                      <p class="tooltip-icon">i</p>
+                      <svg width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
+                        </svg>
                     </button>
                     <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст
                      которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
@@ -367,7 +369,7 @@
                       </svg>
                   </button>
                 </div>
-                </div>
+                </input>
               </div>
             <button class="modal-search-button">Найти</button>
           </form>
