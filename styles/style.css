@@ -139,7 +139,7 @@ body {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
   overflow: hidden;
   width: 1px;
   height: 1px;
@@ -679,21 +679,91 @@ body {
   margin-bottom: 10px;
 }
 
-.filter-checkbox {
-  appearance: none;
+.control-mark {
+  position: relative;
+  display: inline-block;
   width: 20px;
   height: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 50%;
   background-color: #fff;
-  cursor: pointer;
-  margin-right: 10px;
 }
 
-.filter-square .filter-checkbox:checked::before {
-  background-color: #3f5e72;
-  border: 10px solid #ccc;
+.control-check {
+  position: relative;
+  display: inline-block;
 }
+
+.control-check::after {
+  content: '';
+  position: absolute;
+  background-image: url(../images/check.svg);
+  opacity: 0;
+}
+
+.control-mark::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  opacity: 0;
+}
+
+.field-radio-input:checked + .control-mark::after  {
+opacity: 1;
+}
+
+.field-radio {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.field-check {
+  display: flex;
+  align-items: center;
+}
+
+  .filter-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 19px;
+    border: 2px solid #fff; /* Белая рамка */
+    border-radius: 4px;
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .filter-checkbox:checked {
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='11' viewBox='0 0 13 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 0.5L4.5 7.9L1.1 4L0 5.2L4.5 10.4L12.2 1.8L11 0.5Z' fill='%233F5E72'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 13px 11px;
+  }
+
+  .filter-checkbox:checked::after {
+    content: "";
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .field-check {
+    display: flex;
+    align-items: center;
+    color: #fff; /* Белый текст */
+  }
 
 .filter-square .filter-checkbox::before {
   content: "";
@@ -802,8 +872,8 @@ body {
 .field {
   margin: 0;
   padding: 8px 14px;
-  font: PT Sans;
-  font-weight: 700px;
+  font-family: "PT Sans";
+  font-weight: 700;
   background-color: #f2f2f2;
   border: 0;
 }
@@ -829,8 +899,46 @@ body {
 }
 
 .price-slider {
+  position: relative;
   width: 100%;
+  max-width: 400px;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
   margin-top: 36px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #E5E5E5;
+  width: 61px;
+  right: 0;
+}
+
+.toggle-min {
+  left: -157px;
+}
+
+.range-toggle{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-max {
+  left: 0;
 }
 
 .button {
@@ -844,7 +952,7 @@ body {
   cursor: pointer;
 }
 
-.button:hower {
+.button:hover {
   background-color: #2a6fd7;
 }
 
@@ -852,7 +960,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
-  font-family: PT Sans;
+  font-family: "PT Sans";
   background-color: #82b3d3;
   text-transform: uppercase;
   border: none;
@@ -1235,30 +1343,32 @@ body {
 
 .form-arrival {
   width: 100%;
-  padding-right: 30px;
-  padding-left: 10px;
-  font-size: 14px;
-}
-
-.form-back {
-  width: 100%;
-}
-
-.form-back::placeholder {
+  padding: 12px 20px;
   margin: 0;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   font-family: "PT Sans";
   color: #000;
+  box-sizing: border-box;
 }
 
-.form-arrival::placeholder {
+.form-back {
   margin: 0;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   font-family: "PT Sans";
+  color: #000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-back::placeholder {
+  color: #000;
+}
+
+.form-arrival::placeholder {
   color: #000;
 }
 
@@ -1275,9 +1385,12 @@ body {
 .form-img {
   cursor: pointer;
   position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  padding: 14px;
+  border: none;
+  display: block;
+  right: 0;
+  top: 0;
+  border-radius: 4px;
 }
 
 .form-notice {
@@ -1307,22 +1420,24 @@ body {
   align-items: center;
   background-color: #f2f2f2;
   border-radius: 4px;
-  gap: 10px;
-  padding: 10px;
   margin-left: 46px;
 }
 
 .decrease-button,
 .increase-button {
+  width: 40px;
+  height: 48px;
   border: none;
   cursor: pointer;
   padding: 5px;
+  border-radius: 4px;
 }
 
 .modal-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 88px;
 }
 
 .text-person {
@@ -1331,7 +1446,19 @@ body {
   line-height: 20px;
   font-weight: 700;
   font-family: "PT Sans";
+  text-align: center;
   color: #000;
+  height: 48px;
+  width: 31px;
+}
+
+.text-person::placeholder {
+  color: #000;
+}
+
+.text-person::-webkit-outer-spin-button,
+.text-person::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .modal-search-button {
@@ -1346,6 +1473,11 @@ body {
   align-items: center;
   cursor: pointer;
   padding: 10px 20px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "PT Sans";
 }
 
 .modal-search-button:hover {
@@ -1357,7 +1489,7 @@ body {
   background-color: #83b3d3;
   padding: 0;
   margin: 0;
-  display: flex;
+  display: block;
   width: 25px;
   height: 25px;
   border-radius: 50%;
